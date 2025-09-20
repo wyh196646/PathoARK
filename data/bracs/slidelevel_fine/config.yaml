@@ -1,0 +1,19 @@
+datasets:
+  - bracs
+
+task_col: slidelevel_fine
+extra_cols: []  # Extra columns to copy from raw metadata to split TSVs
+task_type: classification
+metrics:
+  - bacc
+label_dict:
+  0: Atypical ductal hyperplasia
+  1: Ductal carcinoma in situ
+  2: Flat epithelial atypia
+  3: Invasive carcinoma
+  4: Normal
+  5: Pathological benign
+  6: Usual ductal hyperplasia
+
+sample_col: slide_id
+num_samples: 547

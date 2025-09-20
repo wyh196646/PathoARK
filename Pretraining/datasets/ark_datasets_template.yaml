@@ -1,0 +1,34 @@
+# Example YAML describing multiple pathology datasets for ARK-style pretraining
+# Each top-level key is a dataset name; values specify paths and config.
+# For each dataset, provide:
+# - csv: path to slide-level CSV with labels (or mapping with train/val)
+# - root_path: directory containing .h5 (or .pt) slide feature files
+# - split_dir: directory with train.csv / val.csv of split ids (column split_key)
+# - task_cfg_path: YAML defining label_dict and setting (multi_class/multi_label)
+# - num_classes: number of classes for this dataset
+# Optional:
+# - slide_key, split_key, max_tiles, shuffle_tiles, subsample_ratio
+
+BRCA_Immune:
+  csv: /path/to/brca_immune.csv
+  root_path: /path/to/slide_features_h5
+  split_dir: /path/to/splits/brca_immune
+  task_cfg_path: /path/to/task_configs/brca_immune.yaml
+  num_classes: 3
+  slide_key: slide_id
+  split_key: pat_id
+  max_tiles: 2000
+  shuffle_tiles: true
+  subsample_ratio: 0.8
+
+CRC_OS:
+  csv: /path/to/crc_os.csv
+  root_path: /path/to/slide_features_h5
+  split_dir: /path/to/splits/crc_os
+  task_cfg_path: /path/to/task_configs/crc_os.yaml
+  num_classes: 2
+  slide_key: slide_id
+  split_key: pat_id
+  max_tiles: 1500
+  shuffle_tiles: true
+  subsample_ratio: 1.0

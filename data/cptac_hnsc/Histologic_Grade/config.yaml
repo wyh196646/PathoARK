@@ -1,0 +1,13 @@
+datasets:
+- cptac_hnsc
+extra_cols: []
+label_dict:
+  0: 1
+  1: 2
+  2: 3
+metrics:
+- weighted_kappa
+num_samples: 107
+sample_col: case_id
+task_col: Histologic_Grade
+task_type: classification

@@ -1,0 +1,29 @@
+BASE_LEARNING_RATE: # Base learning rate
+    - 0.000025
+
+WEIGHT_DECAY: # Weight decay
+    - 0
+
+LAYER_DECAY: # Layer-wise learning rate decay
+    - 0
+
+GRADIENT_ACCUMULATION: # Gradient accumulation
+    - 1
+
+NUM_EPOCHS: # Number of epochs
+    - 5
+
+SCHEDULER_TYPE: # Scheduler type
+    - cosine
+
+OPTIMIZER_TYPE: # Optimizer type
+    - AdamW
+
+BALANCED: # Whether to use balanced loss
+    - True
+
+BAG_SIZE: # Bag size
+    - 2048
+
+SAVE_WHICH_CHECKPOINTS: # Method to save checkpoints
+    - last-1

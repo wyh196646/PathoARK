@@ -1,0 +1,42 @@
+datasets:
+  - ebrains
+
+task_col: diagnosis
+extra_cols: []
+task_type: classification
+metrics:
+  - bacc
+label_dict:
+  0: "Glioblastoma, IDH-wildtype"
+  1: "Gliosarcoma"
+  2: "Transitional meningioma"
+  3: "Anaplastic meningioma"
+  4: "Pituitary adenoma"
+  5: "Oligodendroglioma, IDH-mutant and 1p/19q codeleted"
+  6: "Haemangioma"
+  7: "Ganglioglioma"
+  8: "Pilocytic astrocytoma"
+  9: "Schwannoma"
+  10: "Anaplastic oligodendroglioma, IDH-mutant and 1p/19q codeleted"
+  11: "Fibrous meningioma"
+  12: "Anaplastic astrocytoma, IDH-wildtype"
+  13: "Angiomatous meningioma"
+  14: "Haemangioblastoma"
+  15: "Adamantinomatous craniopharyngioma"
+  16: "Anaplastic astrocytoma, IDH-mutant"
+  17: "Glioblastoma, IDH-mutant"
+  18: "Diffuse astrocytoma, IDH-mutant"
+  19: "Ependymoma"
+  20: "Anaplastic ependymoma"
+  21: "Atypical meningioma"
+  22: "Metastatic tumours"
+  23: "Meningothelial meningioma"
+  24: "Langerhans cell histiocytosis"
+  25: "Diffuse large B-cell lymphoma of the CNS"
+  26: "Secretory meningioma"
+  27: "Haemangiopericytoma"
+  28: "Lipoma"
+  29: "Medulloblastoma, non-WNT/non-SHH"
+
+sample_col: slide_id
+num_samples: 2319

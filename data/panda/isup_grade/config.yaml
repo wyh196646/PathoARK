@@ -1,0 +1,18 @@
+datasets:
+  - panda
+
+task_col: isup_grade
+extra_cols: []
+task_type: classification
+metrics:
+  - weighted_kappa
+label_dict:
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+
+sample_col: slide_id
+num_samples: 9555

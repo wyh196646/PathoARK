@@ -1,0 +1,14 @@
+datasets:
+  - ebrains
+
+task_col: idh_status
+extra_cols: []
+task_type: classification
+metrics:
+  - macro-ovr-auc
+label_dict:
+  0: wildtype
+  1: mutant
+
+sample_col: slide_id
+num_samples: 848

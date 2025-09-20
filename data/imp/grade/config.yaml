@@ -1,0 +1,15 @@
+datasets:
+  - imp
+
+task_col: grade
+extra_cols: []
+task_type: classification
+metrics:
+  - weighted_kappa
+label_dict:
+  0: "0 (non-neoplastic)"
+  1: "1 (low-grade)"
+  2: "2 (high-grade)"
+
+sample_col: slide_id
+num_samples: 5333

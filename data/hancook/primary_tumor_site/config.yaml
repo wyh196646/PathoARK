@@ -1,0 +1,14 @@
+datasets:
+- hancook
+extra_cols: []
+label_dict:
+  0: Oral Cavity
+  1: Hypopharynx
+  2: Larynx
+  3: Oropharynx
+metrics:
+- bacc
+num_samples: 696
+sample_col: case_id
+task_col: primary_tumor_site
+task_type: classification

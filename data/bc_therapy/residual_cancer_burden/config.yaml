@@ -1,0 +1,14 @@
+datasets:
+- bc_therapy
+extra_cols: []
+label_dict:
+  0: pCR
+  1: RCB-I
+  2: RCB-II
+  3: RCB-III
+metrics:
+- bacc
+num_samples: 159
+sample_col: case_id
+task_col: residual_cancer_burden
+task_type: classification

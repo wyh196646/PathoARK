@@ -1,0 +1,43 @@
+# ==== Config for running multiple tasks with flexible parallelization ==== #
+# NOTE: Space-separated tasks are run sequentially while newline-separated tasks are run in parallel
+# The below task groupings are based on the THREADS paper (https://arxiv.org/pdf/2501.16652).
+
+## MORPHOLOGICAL SUBTYPING
+- ebrains--diagnosis ebrains--diagnosis_group
+- bracs--slidelevel_fine bracs--slidelevel_coarse
+
+## TUMOR GRADING
+- panda--isup_grade
+- imp--grade
+
+## MOLECULAR SUBTYPING
+- bcnb--er bcnb--pr bcnb--her2
+
+## MUTATION STATUS
+- cptac_brca--PIK3CA_mutation cptac_brca--TP53_mutation
+- cptac_ccrcc--BAP1_mutation cptac_ccrcc--PBRM1_mutation
+- cptac_coad--KRAS_mutation cptac_coad--TP53_mutation
+- cptac_gbm--EGFR_mutation cptac_gbm--TP53_mutation
+- cptac_hnsc--CASP8_mutation 
+- cptac_lscc--KEAP1_mutation cptac_lscc--ARID1A_mutation
+- cptac_luad--EGFR_mutation cptac_luad--STK11_mutation
+- cptac_luad--TP53_mutation 
+- cptac_pda--SMAD4_mutation 
+- mut-het-rcc--BAP1_mutation mut-het-rcc--PBRM1_mutation mut-het-rcc--SETD2_mutation
+- sr386_--braf_mutant_binary sr386_--ras_mutant_binary sr386_--mmr_loss_binary 
+
+## TREATMENT RESPONSE
+- nadt--response
+- ovarian--response
+- natbrca--lymphovascular_invasion
+- mbc_--Recist
+- mbc_--OS          # Must use coxnet
+- boehmk_--PFS      # Must use coxnet
+
+# # SURVIVAL
+- sr386_--OS        # Must use coxnet
+- sr386_--died_within_5_years
+- cptac_pda--OS     # Must use coxnet
+- cptac_luad--OS    # Must use coxnet
+- cptac_hnsc--OS    # Must use coxnet
+- cptac_ccrcc--OS   # Must use coxnet

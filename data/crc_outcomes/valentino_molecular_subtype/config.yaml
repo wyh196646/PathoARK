@@ -1,0 +1,12 @@
+datasets:
+- crc_outcome
+extra_cols: []
+label_dict:
+  0: no RAS/BRAF
+  1: RAS/BRAF
+metrics:
+- macro-ovr-auc
+num_samples: 96
+sample_col: case_id
+task_col: valentino_molecular_subtype
+task_type: classification

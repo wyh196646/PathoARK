@@ -1,0 +1,14 @@
+datasets:
+  - sr386_
+
+task_col: mmr_loss_binary
+extra_cols: []
+task_type: classification
+metrics:
+  - macro-ovr-auc
+label_dict:
+  0: wildtype
+  1: mutant
+
+sample_col: case_id
+num_samples: 389

@@ -1,0 +1,12 @@
+datasets:
+- crc_outcomes
+extra_cols: []
+label_dict:
+  0: low grade
+  1: high grade
+metrics:
+- macro-ovr-auc
+num_samples: 135
+sample_col: case_id
+task_col: braf_tils
+task_type: classification

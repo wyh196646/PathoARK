@@ -1,0 +1,13 @@
+datasets:
+- crc_outcomes
+extra_cols: []
+label_dict:
+  0: Low
+  1: Medium
+  2: High
+metrics:
+- weighted_kappa
+num_samples: 134
+sample_col: case_id
+task_col: braf_grading
+task_type: classification

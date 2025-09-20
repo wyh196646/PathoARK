@@ -1,0 +1,12 @@
+datasets:
+- hancook
+extra_cols: []
+label_dict:
+  0: 2
+  1: 3
+metrics:
+- weighted_kappa
+num_samples: 74
+sample_col: case_id
+task_col: grading_SCC_Conventional_NonKeratinizing
+task_type: classification

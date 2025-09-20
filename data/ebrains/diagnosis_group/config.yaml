@@ -1,0 +1,24 @@
+datasets:
+  - ebrains
+
+task_col: diagnosis_group
+extra_cols: []
+task_type: classification
+metrics:
+  - bacc
+label_dict:
+  0: "Adult-type diffuse gliomas"
+  1: "Meningiomas"
+  2: "Tumours of the sellar region"
+  3: "Mesenchymal, non-meningothelial tumours involving the CNS"
+  4: "Glioneuronal and neuronal tumours"
+  5: "Circumscribed astrocytic gliomas"
+  6: "Cranial and paraspinal nerve tumours"
+  7: "Paediatric-type diffuse low-grade gliomas "
+  8: "Ependymal tumours"
+  9: "Metastatic tumours"
+  10: "Haematolymphoid tumours involving the CNS"
+  11: "Embryonal tumours"
+
+sample_col: slide_id
+num_samples: 2319

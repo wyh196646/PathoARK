@@ -1,0 +1,12 @@
+datasets:
+- crc_outcome
+extra_cols: []
+label_dict:
+  0: No MSI
+  1: MSI
+metrics:
+- macro-ovr-auc
+num_samples: 136
+sample_col: case_id
+task_col: valentino_msi
+task_type: classification

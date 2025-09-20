@@ -1,0 +1,12 @@
+datasets:
+- visiomel
+extra_cols: []
+label_dict:
+  0: negative
+  1: positive
+metrics:
+- macro-ovr-auc
+num_samples: 1341
+sample_col: case_id
+task_col: relapse_overall
+task_type: classification

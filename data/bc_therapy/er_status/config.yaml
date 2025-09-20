@@ -1,0 +1,12 @@
+datasets:
+- bc_therapy
+extra_cols: []
+label_dict:
+  0: negative
+  1: positive
+metrics:
+- macro-ovr-auc
+num_samples: 166
+sample_col: case_id
+task_col: er_status
+task_type: classification

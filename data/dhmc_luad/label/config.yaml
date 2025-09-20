@@ -1,0 +1,17 @@
+datasets:
+  - dhmc_luad
+
+task_col: label
+extra_cols: []
+task_type: classification
+metrics:
+  - bacc
+label_dict:
+  0: Acinar
+  1: Lepidic
+  2: Micropapillary
+  3: Papillary
+  4: Solid
+
+sample_col: slide_id
+num_samples: 143

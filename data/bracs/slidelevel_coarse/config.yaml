@@ -1,0 +1,15 @@
+datasets:
+  - bracs
+
+task_col: slidelevel_coarse
+extra_cols: []  # Extra columns to copy from raw metadata to split TSVs
+task_type: classification
+metrics:
+  - bacc
+label_dict:
+  0: Atypical tumor
+  1: Benign tumor
+  2: Malignant tumor
+
+sample_col: slide_id
+num_samples: 547

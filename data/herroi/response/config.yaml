@@ -1,0 +1,14 @@
+datasets:
+  - herroi
+
+task_col: response
+extra_cols: []
+task_type: classification
+metrics:
+  - macro-ovr-auc
+label_dict:
+  0: negative
+  1: positive
+
+sample_col: slide_id
+num_samples: 85

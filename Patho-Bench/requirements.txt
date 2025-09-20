@@ -1,0 +1,8 @@
+git+https://github.com/mahmoodlab/trident.git
+threadpoolctl
+scikit-learn
+scikit-survival
+lovely-tensors
+seaborn
+datasets==3.6.0
+einops

@@ -1,0 +1,12 @@
+datasets:
+- hancook
+extra_cols: []
+label_dict:
+  0: negative
+  1: positive
+metrics:
+- macro-ovr-auc
+num_samples: 697
+sample_col: case_id
+task_col: perineural_invasion_Pn
+task_type: classification

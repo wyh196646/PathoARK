@@ -1,0 +1,14 @@
+datasets:
+  - sr386_
+
+task_col: died_within_5_years
+extra_cols: []
+task_type: classification
+metrics:
+  - macro-ovr-auc
+label_dict:
+  0: no
+  1: yes
+
+sample_col: case_id
+num_samples: 387

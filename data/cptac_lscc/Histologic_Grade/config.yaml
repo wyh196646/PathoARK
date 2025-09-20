@@ -1,0 +1,12 @@
+datasets:
+- cptac_lscc
+extra_cols: []
+label_dict:
+  0: Well differentiated
+  1: Moderately differentiated
+metrics:
+- weighted_kappa
+num_samples: 104
+sample_col: case_id
+task_col: Histologic_Grade
+task_type: classification

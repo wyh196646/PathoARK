@@ -1,0 +1,128 @@
+bc_therapy:
+- er_status
+- grade
+- her2_status
+- residual_cancer_burden
+bcnb:
+- er
+- her2
+- pr
+boehmk_:
+- PFS
+bracs:
+- slidelevel_coarse
+- slidelevel_fine
+cervical_subtype:
+- subtype
+cptac_all:
+- organ
+cptac_brca:
+- Immune_class
+- PIK3CA_mutation
+- TP53_mutation
+cptac_ccrcc:
+- BAP1_mutation
+- Immune_class
+- OS
+- PBRM1_mutation
+- VHL_mutation
+cptac_ccrcc_dhmc:
+- OncoTreeCode
+cptac_coad:
+- ACVR2A_mutation
+- APC_mutation
+- ARID1A_mutation
+- Immune_class
+- KRAS_mutation
+- MSI_H
+- PIK3CA_mutation
+- SETD1B_mutation
+- TP53_mutation
+cptac_gbm:
+- EGFR_mutation
+- Immune_class
+- TP53_mutation
+cptac_hnsc:
+- CASP8_mutation
+- Histologic_Grade
+- Immune_class
+- OS
+cptac_lscc:
+- ARID1A_mutation
+- Histologic_Grade
+- Immune_class
+- KEAP1_mutation
+cptac_luad:
+- EGFR_mutation
+- Immune_class
+- KRAS_mutation
+- OS
+- STK11_mutation
+- TP53_mutation
+cptac_lung:
+- subtype
+cptac_ov:
+- Immune_class
+cptac_pda:
+- Immune_class
+- OS
+- SMAD4_mutation
+cptac_ucec:
+- CTNNB1_mutation
+- Immune_class
+- PTEN_mutation
+crc_outcomes:
+- OS_VALENTINO
+- PFS_VALENTINO
+- braf_grading
+- braf_lymphovas_invasion
+- braf_mmr
+- braf_synapto
+- braf_tils
+- valentino_molecular_subtype
+- valentino_msi
+dhmc_luad:
+- label
+ebrains:
+- diagnosis
+- diagnosis_group
+- idh_status
+hancook:
+- OS_treatment_rdc
+- grading_SCC_Conventional_Keratinizing
+- grading_SCC_Conventional_NonKeratinizing
+- lymphovascular_invasion_L
+- perineural_invasion_Pn
+- primarily_metastasis
+- primary_tumor_site
+- vascular_invasion_V
+herroi:
+- response
+imp:
+- grade
+mbc_:
+- OS
+- Recist
+mut-het-rcc:
+- BAP1_mutation
+- PBRM1_mutation
+- SETD2_mutation
+nadt:
+- response
+natbrca:
+- lymphovascular_invasion
+ovarian:
+- response
+panda:
+- isup_grade
+sr386_:
+- OS
+- braf_mutant_binary
+- died_within_5_years
+- mmr_loss_binary
+- ras_mutant_binary
+ucla_lung:
+- progression_regression
+visiomel:
+- relapse_noprev_melanoma
+- relapse_overall

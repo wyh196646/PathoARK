@@ -1,0 +1,12 @@
+datasets:
+- cptac_coad
+extra_cols: []
+label_dict:
+  0: negative
+  1: positive
+metrics:
+- macro-ovr-auc
+num_samples: 93
+sample_col: case_id
+task_col: MSI_H
+task_type: classification

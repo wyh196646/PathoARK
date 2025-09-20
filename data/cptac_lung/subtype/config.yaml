@@ -1,0 +1,12 @@
+datasets:
+- cptac_lung
+extra_cols: []
+label_dict:
+  0: Lung adenocarcinoma (LUAD)
+  1: Lung squamous cell carcinoma (LSCC)
+metrics:
+- macro-ovr-auc
+num_samples: 206
+sample_col: case_id
+task_col: subtype
+task_type: classification

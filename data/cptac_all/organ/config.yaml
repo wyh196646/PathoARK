@@ -1,0 +1,31 @@
+datasets:
+  - cptac_brca
+  - cptac_ccrcc
+  - cptac_coad
+  - cptac_gbm
+  - cptac_hnsc
+  - cptac_lscc
+  - cptac_luad
+  - cptac_pda
+  - cptac_ov
+  - cptac_ucec
+
+task_col: organ
+extra_cols: [] # Extra columns to copy from raw metadata to split TSVs
+task_type: classification
+metrics:
+  - bacc
+label_dict:
+  0: Breast cancer (BRCA)
+  1: Clear cell renal cell carcinoma (CCRCC)
+  2: Colon adenocarcinoma (COAD)
+  3: Glioblastoma (GBM)
+  4: Head and neck squamous cell carcinoma (HNSC)
+  5: Lung squamous cell carcinoma (LSCC)
+  6: Lung adenocarcinoma (LUAD)
+  7: Pancreatic ductal adenocarcinoma (PDA)
+  8: Ovarian cancer (OV)
+  9: Uterine corpus endometrial carcinoma (UCEC)
+
+sample_col: slide_id
+num_samples: 2154

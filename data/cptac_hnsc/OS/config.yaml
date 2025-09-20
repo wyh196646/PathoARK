@@ -1,0 +1,22 @@
+datasets:
+  - cptac_hnsc
+
+task_col: OS
+extra_cols:
+  - OS_event
+  - OS_days
+task_type: survival
+metrics:
+  - cindex
+label_dict:
+  0: Quartile 1, Event 0
+  1: Quartile 2, Event 0
+  2: Quartile 3, Event 0
+  3: Quartile 4, Event 0
+  4: Quartile 1, Event 1
+  5: Quartile 2, Event 1
+  6: Quartile 3, Event 1
+  7: Quartile 4, Event 1
+
+sample_col: case_id
+num_samples: 102

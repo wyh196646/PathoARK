@@ -1,0 +1,12 @@
+datasets:
+- cptac_coad
+extra_cols: []
+label_dict:
+  0: negative
+  1: positive
+metrics:
+- macro-ovr-auc
+num_samples: 94
+sample_col: case_id
+task_col: PIK3CA_mutation
+task_type: classification

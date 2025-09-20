@@ -1,0 +1,11 @@
+COST: # Regularization strength
+  # - 0.001
+  # - 0.01
+  # - 0.1
+  - 0.5
+  # - 1.0
+  # - 10
+  # - adaptive
+
+BALANCED: # Whether to use balanced class weights
+  - True

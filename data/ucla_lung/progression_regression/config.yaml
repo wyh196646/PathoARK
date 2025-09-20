@@ -1,0 +1,12 @@
+datasets:
+- ucla_lung
+extra_cols: []
+label_dict:
+  0: regression
+  1: progression
+metrics:
+- macro-ovr-auc
+num_samples: 112
+sample_col: case_id
+task_col: progression_regression
+task_type: classification

@@ -1,0 +1,15 @@
+datasets:
+  - cptac_ccrcc_dhmc
+
+task_col: OncoTreeCode
+extra_cols: []
+task_type: classification
+metrics:
+  - bacc
+label_dict:
+  0: Clear cell renal cell carcinoma (CCRCC)
+  1: Papillary renal cell carcinoma (PRCC)
+  2: Chromophobe renal cell carcinoma (CHRCC)
+
+sample_col: slide_id
+num_samples: 871

@@ -1,0 +1,14 @@
+datasets:
+- cervical_subtype
+extra_cols: []
+label_dict:
+  0: Non-neoplastic (NNeo)
+  1: Low-grade squamous intraepithelial lesion (LSIL)
+  2: High-grade squamous intraepithelial lesion (HSIL)
+  3: Non-representative (other)
+metrics:
+- macro-ovr-auc
+num_samples: 599
+sample_col: case_id # the task is slide level, but for easier access using case_id
+task_col: subtype
+task_type: classification

@@ -1,0 +1,16 @@
+datasets:
+  - mbc_
+
+task_col: Recist
+extra_cols: []
+task_type: classification
+metrics:
+  - weighted_kappa
+label_dict:
+  0: SD
+  1: PD
+  2: PR
+  3: CR
+
+sample_col: case_id
+num_samples: 76
