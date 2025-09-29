@@ -44,8 +44,8 @@ def get_exp_code(args):
     '''Get the experiment code for the current run.'''
     # set up the model code
     model_code = 'eval'
-    if len(args.pretrained) > 0:
-        model_code += '_pretrained'
+    # if len(args.pretrained) > 0:
+    #     model_code += '_pretrained'
     if args.freeze:
         model_code += '_freeze'
         

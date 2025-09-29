@@ -110,7 +110,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
+*.tar
 # IPython
 profile_default/
 ipython_config.py

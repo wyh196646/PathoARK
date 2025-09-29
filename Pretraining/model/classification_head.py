@@ -1,4 +1,5 @@
 import torch
+import os
 
 from torch import nn
 from . import slide_encoder
@@ -44,8 +45,9 @@ class ClassificationHead(nn.Module):
         feat_layer,
         n_classes=2,
         model_arch="gigapath_slide_enc12l768d",
-        pretrained="hf_hub:prov-gigapath/prov-gigapath",
+        pretrained="",
         freeze=False,
+        ark_pretrained_ckpt: str = '',
         **kwargs,
     ):
         super(ClassificationHead, self).__init__()
@@ -54,6 +56,21 @@ class ClassificationHead(nn.Module):
         self.feat_layer = [eval(x) for x in feat_layer.split("-")]
         self.feat_dim = len(self.feat_layer) * latent_dim
         self.slide_encoder = slide_encoder.create_model(pretrained, model_arch, in_chans=input_dim, **kwargs)
+
+        # Optionally load ARK pretraining checkpoint (MultiTaskHead) and extract slide_encoder weights
+        if ark_pretrained_ckpt:
+            if os.path.isfile(ark_pretrained_ckpt):
+                try:
+                    ckpt = torch.load(ark_pretrained_ckpt, map_location='cpu')
+                    state_dict = ckpt.get('state_dict', ckpt)
+                    # Filter keys that belong to slide_encoder inside MultiTaskHead: e.g., 'slide_encoder.xxx'
+                    slide_keys = {k.split('slide_encoder.',1)[1]: v for k, v in state_dict.items() if k.startswith('slide_encoder.')}
+                    missing, unexpected = self.slide_encoder.load_state_dict(slide_keys, strict=False)
+                    print(f"Loaded ARK slide_encoder weights from {ark_pretrained_ckpt}. Missing={len(missing)} Unexpected={len(unexpected)}")
+                except Exception as e:
+                    print(f"Failed to load ARK pretrained checkpoint {ark_pretrained_ckpt}: {e}")
+            else:
+                print(f"ARK pretrained checkpoint not found: {ark_pretrained_ckpt}")
 
         # whether to freeze the pretrained model
         if freeze:

@@ -23,9 +23,11 @@ def get_finetune_params():
     parser.add_argument('--input_dim',      type=int, default=1536, help='Dimension of input tile embeddings')
     parser.add_argument('--latent_dim',     type=int, default=768, help='Hidden dimension of the slide encoder')
     parser.add_argument('--feat_layer',     type=str, default='11', help='The layers from which embeddings are fed to the classifier, e.g., 5-11 for taking out the 5th and 11th layers')
-    parser.add_argument('--pretrained',     type=str, default='', help='Pretrained GigaPath slide encoder')
+    #parser.add_argument('--pretrained',     type=str, default='', help='Pretrained GigaPath slide encoder')
     parser.add_argument('--freeze',         action='store_true', default=False, help='Freeze pretrained model')
     parser.add_argument('--global_pool',    action='store_true', default=False, help='Use global pooling, will use [CLS] token if False')
+    # ARK pretraining checkpoint (MultiTaskHead) to load slide_encoder weights from
+    parser.add_argument('--ark_pretrained_ckpt', type=str, default='', help='Path to ARK pretraining checkpoint (.pth.tar) to initialize slide encoder weights for finetuning')
 
     # training settings
     parser.add_argument('--seed',           type=int, default=0, help='Random seed')

@@ -4,8 +4,9 @@ import torch
 from ark_params import get_ark_pretrain_params
 from ark_pretrain import ark_pretrain_run
 from datasets.pretrain_dataset import SlidePretrainDataset
-#set cuda avalible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+
+# NOTE: 不要在代码里硬编码 CUDA_VISIBLE_DEVICES，交给外部启动脚本或 torchrun 来管理。
+# 如果需要限制显卡，可在启动命令前加： CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun ...
 
 def build_dataset_from_cfg(d, split: str):
     # d has keys: csv, root_path, split_dir, task_cfg_path, slide_key, split_key, max_tiles, shuffle_tiles, subsample_ratio, num_classes
@@ -47,3 +48,8 @@ if __name__ == '__main__':
     args = get_ark_pretrain_params()
     ckpt = ark_pretrain_run(args, build_dataset_fn=build_dataset_from_cfg, datasets_yaml=args.datasets_yaml)
     print(f"Pretraining finished. Best checkpoint: {ckpt}")
+
+
+
+
+# CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --nproc_per_node=4 ark_main.py \

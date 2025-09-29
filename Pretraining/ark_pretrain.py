@@ -27,6 +27,16 @@ def is_main_process():
 
 
 def init_distributed_mode(args):
+    """Initialize DDP.
+    修复要点:
+    1) 如果通过 torchrun 启动但没有加 --distributed，也自动开启.
+    2) 每个进程设置独立 device: cuda:local_rank
+    3) 仅在成功初始化后才保持 args.distributed=True
+    """
+    torchrun_env = ('RANK' in os.environ and 'WORLD_SIZE' in os.environ)
+    if torchrun_env and not args.distributed:
+        # 自动打开分布式
+        args.distributed = True
     if not args.distributed:
         args.distributed = False
         return
@@ -42,12 +52,14 @@ def init_distributed_mode(args):
         args.distributed = False
         return
 
+    # Properly set device for each process according to local_rank
     torch.cuda.set_device(args.local_rank)
+    args.device = f"cuda:{args.local_rank}"
     dist.init_process_group(backend=args.dist_backend, init_method=args.dist_url,
                             world_size=args.world_size, rank=args.rank)
     dist.barrier()
-    if is_main_process():
-        print(f"Initialized DDP: rank {args.rank}/{args.world_size} local_rank {args.local_rank}")
+    # 每个进程都打印一次，方便核对 (可以只主进程打印 rank map)
+    print(f"[DDP Init] rank={args.rank} local_rank={args.local_rank} world_size={args.world_size} device={args.device} current_device={torch.cuda.current_device()}")
 
 
 def cosine_scheduler(base_value, final_value, epochs, niter_per_ep):
@@ -155,6 +167,7 @@ def evaluate_losses(model, data_loaders, dataset_names, criterion_list, device):
 def ark_pretrain_run(args, build_dataset_fn, datasets_yaml: str):
     # init DDP if requested
     init_distributed_mode(args)
+    # after init_distributed_mode we ensure args.device is specific per rank when distributed
     device = torch.device(args.device)
     # build datasets
     train_names, train_sets, train_criterions, num_classes_list = build_datasets_from_yaml(datasets_yaml, "train", build_dataset_fn)
@@ -206,7 +219,14 @@ def ark_pretrain_run(args, build_dataset_fn, datasets_yaml: str):
 
     if args.distributed:
         # teacher 只在本地复制，不包 DDP（EMA 手动更新）
-        model = DDP(model.cuda(), device_ids=[args.local_rank], output_device=args.local_rank, find_unused_parameters=False)
+        # 如果逐个数据集单独 forward 某个 head，会导致其它 head 的参数在该 iteration 未被使用 -> DDP 报错
+        # 解决方案: 启用 find_unused_parameters 或者一次性使用所有 heads. 这里优先使用 find_unused_parameters.
+        model = DDP(
+            model,
+            device_ids=[args.local_rank],
+            output_device=args.local_rank,
+            find_unused_parameters=getattr(args, 'find_unused_parameters', True)
+        )
 
     # losses per dataset from builder
     criterion_list = train_criterions

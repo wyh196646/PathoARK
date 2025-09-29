@@ -186,7 +186,8 @@ class SlideDataset(SlideDatasetForTasks):
                 images = images[:self.max_tiles, :]
             if coords.size(0) > self.max_tiles:
                 coords = coords[:self.max_tiles, :]
-        
+        ##coords //10
+        coords = (coords / 10).int()
         # set the input dict
         data_dict = {'imgs': images,
                 'img_lens': images.size(0),
