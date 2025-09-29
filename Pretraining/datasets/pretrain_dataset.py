@@ -25,15 +25,15 @@ class SlidePretrainDataset(Dataset):
 
     def __init__(
         self,
-        data_df: pd.DataFrame,
-        root_path: str,
-        splits: list,
-        task_config: dict,
-        slide_key: str = "slide_id",
-        split_key: str = "pat_id",
-        view_max_tiles: int | None = None,
-        shuffle_tiles: bool = True,
-        subsample_ratio: float = 1.0,
+        data_df,
+        root_path,
+        splits,
+        task_config,
+        slide_key="slide_id",
+        split_key="pat_id",
+        view_max_tiles=3000,
+        shuffle_tiles=True,
+        subsample_ratio=1.0,
     ):
         super().__init__()
         self.root_path = root_path
@@ -94,6 +94,9 @@ class SlidePretrainDataset(Dataset):
         return images, coords
 
     def _augment(self, images: torch.Tensor, coords: torch.Tensor):
+        
+        ##add some preprocess,enable coords and coords all < 1000*1000
+    
         n = images.size(0)
         idx = torch.arange(n)
         if self.shuffle_tiles:
@@ -106,6 +109,10 @@ class SlidePretrainDataset(Dataset):
         if images.size(0) > self.max_tiles:
             images = images[: self.max_tiles]
             coords = coords[: self.max_tiles]
+            
+        #all coords / 10 -> int
+        coords = (coords / 10).int()
+        
         return images, coords
 
     def __getitem__(self, idx):

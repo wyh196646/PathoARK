@@ -1,7 +1,7 @@
 # Copyright (c) 2022 Microsoft
 # Licensed under The MIT License [see LICENSE for details]
 
-
+import numpy as np
 class EncoderConfig(object):
     def __init__(self, **kwargs):
         self.encoder_embed_dim = kwargs.pop("encoder_embed_dim", 768)

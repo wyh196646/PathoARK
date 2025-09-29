@@ -12,7 +12,7 @@ import torch
 import numpy as np
 import torch.utils.tensorboard as tensorboard
 
-from gigapath.classification_head import get_model
+from model.classification_head import get_model
 from metrics import calculate_metrics_with_task_cfg
 from utils import (get_optimizer, get_loss_function, \
                   Monitor_Score, get_records_array,

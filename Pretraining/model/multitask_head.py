@@ -106,6 +106,7 @@ class MultiTaskHead(nn.Module):
         If head_n is not None: returns (features, logits) for that head.
         Else: returns list of logits for all heads.
         """
+    # 不在此处强制转换为 fp16，外层 with torch.cuda.amp.autocast 控制精度
         feats = self._extract_features(images, coords)
         if head_n is not None:
             return feats, self.heads[head_n](feats)

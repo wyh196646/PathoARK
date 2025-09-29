@@ -3,14 +3,12 @@
 import os
 import sys
 
-this_file_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(this_file_dir, '../../'))
-
-from torchscale.model import LongNetConfig as longnet_arch
-from torchscale.architecture.config import EncoderConfig
-from torchscale.architecture.decoder import Decoder, DecoderLayer
-from torchscale.architecture.encoder import Encoder, EncoderLayer
-from torchscale.component.dilated_attention import DilatedAttention
+# Use package-relative imports to ensure we load the local implementation
+from . import LongNetConfig as longnet_arch
+from ..architecture.config import EncoderConfig
+from ..architecture.decoder import Decoder, DecoderLayer
+from ..architecture.encoder import Encoder, EncoderLayer
+from ..component.dilated_attention import DilatedAttention
 from fairscale.nn import checkpoint_wrapper, wrap
 
 

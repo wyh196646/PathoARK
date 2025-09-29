@@ -1,10 +1,11 @@
 import os
 import pandas as pd
-
+import torch
 from ark_params import get_ark_pretrain_params
 from ark_pretrain import ark_pretrain_run
 from datasets.pretrain_dataset import SlidePretrainDataset
-
+#set cuda avalible devices
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 
 def build_dataset_from_cfg(d, split: str):
     # d has keys: csv, root_path, split_dir, task_cfg_path, slide_key, split_key, max_tiles, shuffle_tiles, subsample_ratio, num_classes
@@ -33,12 +34,12 @@ def build_dataset_from_cfg(d, split: str):
         subsample_ratio=d.get("subsample_ratio", 1.0),
     )
     # choose criterion based on task setting
-    import torch as _torch
+    
     setting = task_cfg.get('setting', 'multi_class')
     if setting == 'multi_label':
-        crit = _torch.nn.BCEWithLogitsLoss()
+        crit = torch.nn.BCEWithLogitsLoss()
     else:
-        crit = _torch.nn.CrossEntropyLoss()
+        crit = torch.nn.CrossEntropyLoss()
     return ds, crit
 
 
