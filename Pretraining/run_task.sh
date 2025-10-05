@@ -1,9 +1,9 @@
 # Task setting
-TASKCFG=task_configs/subtype/BRACS_FINE.yaml
-DATASETCSV=dataset_csv/subtype/BRACS_FINE.csv
+TASKCFG=task_configs/biomarker/BCNB_ER.yaml
+DATASETCSV=dataset_csv/biomarker/BCNB_ER.csv
 
-ROOTPATH=/data4/embedding/BRACS/Gigapath_tile
-PRESPLITDIR=dataset_csv/BRACS/
+ROOTPATH=/data4/embedding/BCNB/Gigapath_tile
+PRESPLITDIR=dataset_split/BCNB_ER/
 MAX_WSI_SIZE=250000  # Maximum WSI size in pixels for the longer side (width or height).
 TILE_SIZE=256
 # Model settings
@@ -19,7 +19,7 @@ LD=0.95
 FEATLAYER="11"
 DROPOUT=0.1
 # Output settings
-WORKSPACE=outputs/PANDA
+WORKSPACE=outputs/BCNB_ER
 SAVEDIR=$WORKSPACE
 EXPNAME=run_epoch-${EPOCH}_blr-${BLR}_wd-${WD}_ld-${LD}_feat-${FEATLAYER}
 ark_pretrained_ckpt='/home/yuhaowang/project/PathARK/Pretraining/outputs/ark_pretrain/ark_pretrain_e149.pth.tar'

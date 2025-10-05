@@ -1,5 +1,4 @@
 
-
 BCNB_ALN:
   csv: ./dataset_csv/subtype/BCNB_ALN.csv
   root_path: /data4/embedding/BCNB/Gigapath_tile
@@ -24,4 +23,360 @@ BRACS_FINE:
   shuffle_tiles: true
   subsample_ratio: 0.8
 
+
+
+# POST-NAT-BRCA-3TYPE:
+#   csv: ./dataset_csv/subtype/POST-NAT-BRCA-3TYPE.csv
+#   root_path: /data4/embedding/POST-NAT-BRCA-3TYPE/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/POST-NAT-BRCA-3TYPE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+
+# TCGA-BRCA_M:
+#   csv: ./dataset_csv/subtype/TCGA-BRCA_M.csv
+#   root_path: /data4/embedding/TCGA-BRCA/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/TCGA-BRCA_M.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# CAMELYON16_TEST_IDC:
+#   csv: ./dataset_csv/subtype/CAMELYON16_TEST_IDC.csv
+#   root_path: /data4/embedding/CAMELYON16/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/CAMELYON16_TEST_IDC.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# AIDPATH_IDC:
+#   csv: ./dataset_csv/subtype/AIDPATH_IDC.csv
+#   root_path: /data4/embedding/AIDPATH/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/AIDPATH_IDC.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# DORID_2:
+#   csv: ./dataset_csv/subtype/DORID_2.csv
+#   root_path: /data4/embedding/DORID/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/DORID_2.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# TCGA-BRCA_T:
+#   csv: ./dataset_csv/subtype/TCGA-BRCA_T.csv
+#   root_path: /data4/embedding/TCGA-BRCA/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/TCGA-BRCA_T.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# POST-NAT-BRCA-HERIHC:
+#   csv: ./dataset_csv/subtype/POST-NAT-BRCA-HERIHC.csv
+#   root_path: /data4/embedding/POST-NAT-BRCA-HERIHC/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/POST-NAT-BRCA-HERIHC.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# IMPRESS_RESIDUAL-TUMOR:
+#   csv: ./dataset_csv/subtype/IMPRESS_RESIDUAL-TUMOR.csv
+#   root_path: /data4/embedding/IMPRESS/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/IMPRESS_RESIDUAL-TUMOR.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# SLNBREAST_SUBTYPE:
+#   csv: ./dataset_csv/subtype/SLNBREAST_SUBTYPE.csv
+#   root_path: /data4/embedding/SLNBREAST/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/SLNBREAST_SUBTYPE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# AHSL-GRADE-1:
+#   csv: ./dataset_csv/subtype/AHSL-GRADE-1.csv
+#   root_path: /data4/embedding/AHSL-GRADE-1/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/AHSL-GRADE-1.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# BCNB_MOLECULAR:
+#   csv: ./dataset_csv/subtype/BCNB_MOLECULAR.csv
+#   root_path: /data4/embedding/BCNB/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/BCNB_MOLECULAR.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# BCNB_ALN:
+#   csv: ./dataset_csv/subtype/BCNB_ALN.csv
+#   root_path: /data4/embedding/BCNB/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/BCNB_ALN.yaml
+#   num_classes: 3
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# AHSL-NON-IDC-GRADE:
+#   csv: ./dataset_csv/subtype/AHSL-NON-IDC-GRADE.csv
+#   root_path: /data4/embedding/AHSL-NON-IDC-GRADE/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/AHSL-NON-IDC-GRADE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# CAMELYON17_STAGE_4SUBTYPING:
+#   csv: ./dataset_csv/subtype/CAMELYON17_STAGE_4SUBTYPING.csv
+#   root_path: /data4/embedding/CAMELYON17/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/CAMELYON17_STAGE_4SUBTYPING.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# AHSL_SUBTYPE:
+#   csv: ./dataset_csv/subtype/AHSL_SUBTYPE.csv
+#   root_path: /data4/embedding/AHSL/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/AHSL_SUBTYPE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# AIDPATH_GRADE:
+#   csv: ./dataset_csv/subtype/AIDPATH_GRADE.csv
+#   root_path: /data4/embedding/AIDPATH/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/AIDPATH_GRADE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# BCNB_TUMOR:
+#   csv: ./dataset_csv/subtype/BCNB_TUMOR.csv
+#   root_path: /data4/embedding/BCNB/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/BCNB_TUMOR.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# BACH_TUMOR:
+#   csv: ./dataset_csv/subtype/BACH_TUMOR.csv
+#   root_path: /data4/embedding/BACH/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/BACH_TUMOR.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# DORID_6:
+#   csv: ./dataset_csv/subtype/DORID_6.csv
+#   root_path: /data4/embedding/DORID/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/DORID_6.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# CPTAC_AJCC8SUBTYPE:
+#   csv: ./dataset_csv/subtype/CPTAC_AJCC8SUBTYPE.csv
+#   root_path: /data4/embedding/CPTAC/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/CPTAC_AJCC8SUBTYPE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# CAMELYON17_STAGE:
+#   csv: ./dataset_csv/subtype/CAMELYON17_STAGE.csv
+#   root_path: /data4/embedding/CAMELYON17/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/CAMELYON17_STAGE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# AIDPATH_CERB2:
+#   csv: ./dataset_csv/subtype/AIDPATH_CERB2.csv
+#   root_path: /data4/embedding/AIDPATH/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/AIDPATH_CERB2.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# CAMELYON16_TEST_CANCER:
+#   csv: ./dataset_csv/subtype/CAMELYON16_TEST_CANCER.csv
+#   root_path: /data4/embedding/CAMELYON16/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/CAMELYON16_TEST_CANCER.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# AHSL-GRADE-3:
+#   csv: ./dataset_csv/subtype/AHSL-GRADE-3.csv
+#   root_path: /data4/embedding/AHSL-GRADE-3/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/AHSL-GRADE-3.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# BRACS_COARSE:
+#   csv: ./dataset_csv/subtype/BRACS_COARSE.csv
+#   root_path: /data4/embedding/BRACS/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/BRACS_COARSE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# TCGA-BRCA-SUBTYPE:
+#   csv: ./dataset_csv/subtype/TCGA-BRCA-SUBTYPE.csv
+#   root_path: /data4/embedding/TCGA-BRCA-SUBTYPE/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/TCGA-BRCA-SUBTYPE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# TUPAC_TUMOR_SCORE:
+#   csv: ./dataset_csv/subtype/TUPAC_TUMOR_SCORE.csv
+#   root_path: /data4/embedding/TUPAC/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/TUPAC_TUMOR_SCORE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# TCGA-BRCA_STAGE:
+#   csv: ./dataset_csv/subtype/TCGA-BRCA_STAGE.csv
+#   root_path: /data4/embedding/TCGA-BRCA/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/TCGA-BRCA_STAGE.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# BRACS_FINE:
+#   csv: ./dataset_csv/subtype/BRACS_FINE.csv
+#   root_path: /data4/embedding/BRACS/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/BRACS_FINE.yaml
+#   num_classes: 7
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# CPTAC_IDC:
+#   csv: ./dataset_csv/subtype/CPTAC_IDC.csv
+#   root_path: /data4/embedding/CPTAC/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/CPTAC_IDC.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+# TCGA-BRCA_N:
+#   csv: ./dataset_csv/subtype/TCGA-BRCA_N.csv
+#   root_path: /data4/embedding/TCGA-BRCA/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/TCGA-BRCA_N.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
+
+# TCGA-BRCA_MOLECULAR_SUBTYPING:
+#   csv: ./dataset_csv/subtype/TCGA-BRCA_MOLECULAR_SUBTYPING.csv
+#   root_path: /data4/embedding/TCGA-BRCA/Gigapath_tile
+#   split_dir: ./data_split
+#   task_cfg_path: ./task_configs/subtype/TCGA-BRCA_MOLECULAR_SUBTYPING.yaml
+#   num_classes: 2
+#   slide_key: slide_id
+#   split_key: slide_id
+#   max_tiles: 2000
+#   shuffle_tiles: true
+#   subsample_ratio: 0.8
 
